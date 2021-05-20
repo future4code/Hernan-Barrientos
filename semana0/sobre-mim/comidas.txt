@@ -1,0 +1,10 @@
+1 - Pizza
+2 - Sashimi
+3 - Lasanha
+4 - Batata Frita
+5 - Churrasco
+6 - Lanches
+7 - Sopa
+8 - Carne de Panela
+9 - Macarrão com queijo
+10 - Feijão tropeiro
