@@ -55,7 +55,8 @@ function imprimeInformacoesUsuario() {
   const email = prompt('Digite seu e-mail')
 
 console.log("Meu nome é "+nome+", tenho "+idade+" anos, e o meu email é "+email+".")
-//creio que esteja com erro... a lógica aparenta estar correta
+
+
 }
 
 // Exercício 5
@@ -69,6 +70,7 @@ let corTres = prompt('Digite sua 3ª cor favorita')
 let novaArray = [corUm,corDois,corTres]
 
 console.log(novaArray)
+
 }
 
 
@@ -99,12 +101,8 @@ function checaStringsMesmoTamanho() {
   let resultadoUm = textoUm.length
   let resultadoDois = textoDois.length
   
-  if(resultadoUm==resultadoDois){
-    console.log(true)
-  }
-  else {
-    console.log(false)
-  }
+
+  console.log(resultadoUm==resultadoDois)
 
 }
 
@@ -116,12 +114,10 @@ function checaIgualdadeDesconsiderandoCase() {
   let textoQuatro = prompt ('Insira seu novo texto aqui')
   let conversaoUm = textoTres.toUpperCase()
   let conversaoDois = textoQuatro.toUpperCase()
-  if(conversaoUm==conversaoDois){
-    console.log(true)
-  }
-  else {
-    console.log(false)
-  }
+
+  
+  console.log(conversaoUm==conversaoDois)
+
 }
 
 // Exercício 10
@@ -130,34 +126,22 @@ function checaRenovacaoRG() {
 const qualAnoEstamos = Number(prompt('Digite aqui o ano que estamos'))
 const quandoNasceu = Number(prompt('Em que ano você nasceu AAAA'))
 const emissaoRg = Number(prompt('Ano de emissão de sua carteira AAAA'))
-let calculoIdade = (qualAnoEstamos-quandoNasceu)
+
+let idade = (qualAnoEstamos-quandoNasceu)
 let renovacaoRg = (qualAnoEstamos-emissaoRg)
 
-if(calculoIdade <=20 && (renovacaoRg)>=5){
-  console.log(true)
-}
+console.log((idade<=20 && renovacaoRg>=5) || (idade>20&&idade<=50&&renovacaoRg>=10) || (idade>50&&renovacaoRg>=15))
 
-  if (renovacaoRg <5){
-    
-    console.log(false)
-  }
 
-else if((qualAnoEstamos-quandoNasceu)<=50 && (qualAnoEstamos-emissaoRg)>=10){
-  console.log(true)
-}
-  if((qualAnoEstamos-quandoNasceu)<=50 && (qualAnoEstamos-emissaoRg)>10){
-    console.log(false)
-  }
-else if ((qualAnoEstamos-quandoNasceu)>50 && (qualAnoEstamos-emissaoRg)>=15){
-  console.log(true)
-}
-else{
-  console.log(false)
-}
 }
 // Exercício 11
 function checaAnoBissexto() {
   // escreva seu código aqui
+
+const anoAtualizado = Number(prompt("Em que an estamos?"))
+const resultado = (anoAtualizado % 400 == 0) || (anoAtualizado % 4 == 0 && anoAtualizado % 100 !=0)
+console.log(resultado)
+
 }
 
 // Exercício 12
@@ -171,15 +155,6 @@ function checaValidadeInscricaoLabenu() {
   let resposta2 = escolaridade.toUpperCase()
   let resposta3 = disponibilidade.toUpperCase()
 
-  if(maior18=="nao"){
-    console.log(false)
-  }
 
-  else if((resposta1==resposta2) && (resposta2==resposta3)){
-    console.log(true)
-  }
-  
-  else{
-    console.log(false)
-  }
+  console.log(resposta1=="SIM"&&resposta2=="SIM"&&resposta3=="SIM")
 }
