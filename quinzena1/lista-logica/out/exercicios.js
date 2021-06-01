@@ -56,11 +56,13 @@ function imprimeInformacoesUsuario() {
 
 console.log("Meu nome é "+nome+", tenho "+idade+" anos, e o meu email é "+email+".")
 
+
 }
 
 // Exercício 5
 function imprimeTresCoresFavoritas() {
   // escreva seu código aqui
+
 let corUm = prompt('Digite sua 1ª cor favorita')
 let corDois = prompt('Digite sua 2ª cor favorita')
 let corTres = prompt('Digite sua 3ª cor favorita')
@@ -99,7 +101,9 @@ function checaStringsMesmoTamanho() {
   let resultadoUm = textoUm.length
   let resultadoDois = textoDois.length
   
+
   console.log(resultadoUm==resultadoDois)
+
 }
 
 
@@ -110,8 +114,10 @@ function checaIgualdadeDesconsiderandoCase() {
   let textoQuatro = prompt ('Insira seu novo texto aqui')
   let conversaoUm = textoTres.toUpperCase()
   let conversaoDois = textoQuatro.toUpperCase()
+
   
   console.log(conversaoUm==conversaoDois)
+
 }
 
 // Exercício 10
@@ -120,15 +126,18 @@ function checaRenovacaoRG() {
 const qualAnoEstamos = Number(prompt('Digite aqui o ano que estamos'))
 const quandoNasceu = Number(prompt('Em que ano você nasceu AAAA'))
 const emissaoRg = Number(prompt('Ano de emissão de sua carteira AAAA'))
+
 let idade = (qualAnoEstamos-quandoNasceu)
 let renovacaoRg = (qualAnoEstamos-emissaoRg)
 
 console.log((idade<=20 && renovacaoRg>=5) || (idade>20&&idade<=50&&renovacaoRg>=10) || (idade>50&&renovacaoRg>=15))
 
+
 }
 // Exercício 11
 function checaAnoBissexto() {
   // escreva seu código aqui
+
 const anoAtualizado = Number(prompt("Em que an estamos?"))
 const resultado = (anoAtualizado % 400 == 0) || (anoAtualizado % 4 == 0 && anoAtualizado % 100 !=0)
 console.log(resultado)
@@ -146,7 +155,6 @@ function checaValidadeInscricaoLabenu() {
   let resposta2 = escolaridade.toUpperCase()
   let resposta3 = disponibilidade.toUpperCase()
 
-  console.log(resposta1=="SIM"&&resposta2=="SIM"&&resposta3=="SIM")
 
-  
+  console.log(resposta1=="SIM"&&resposta2=="SIM"&&resposta3=="SIM")
 }
