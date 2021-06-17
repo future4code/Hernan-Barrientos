@@ -13,6 +13,14 @@ return arrayReverse
 
 // EXERCÍCIO 02
 function retornaNumerosParesElevadosADois(array) {
+  const arrayNumbers = []
+  for(let newValue of array){
+    if(newValue % 2 === 0){
+      arrayNumbers.push(newValue*newValue)
+
+    }
+  }
+  return arrayNumbers
 
 }
 
