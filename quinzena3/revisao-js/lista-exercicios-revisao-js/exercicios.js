@@ -1,7 +1,7 @@
 // EXERCÍCIO 01
 function inverteArray(array) {
 
-    // - Já estressei X.X
+    
   const arrayReverse = []
 
 for (let i = array.length - 1; i >= 0; i--) {
@@ -37,6 +37,10 @@ return arrayNumbers
 
 // EXERCÍCIO 04
 function retornaMaiorNumero(array) {
+
+
+
+return Math.max(...array)
 
 }
 
