@@ -51,6 +51,13 @@ function retornaQuantidadeElementos(array) {
 
 // EXERCÍCIO 06
 function retornaExpressoesBooleanas() {
+  //a) true && false && false = false` 
+  //b) false ||  false = false 
+  //c) true && true = true 
+  //d) true || false = true
+  //e) false || true = true
+  const respostas = [false, false, true, true, true]
+  return respostas
 
 }
 
