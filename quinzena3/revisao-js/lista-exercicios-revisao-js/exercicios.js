@@ -1,11 +1,11 @@
 // EXERCÍCIO 01
 function inverteArray(array) {
 
-  const arrayNumber = []  // - Já estressei X.X
+    // - Já estressei X.X
   const arrayReverse = []
 
-for (let i = arrayNumber.length - 1; i > 0; i--) {
-  arrayReverse.push(arrayNumber[i])
+for (let i = array.length - 1; i >= 0; i--) {
+  arrayReverse.push(array[i])
    
 }
 return arrayReverse
