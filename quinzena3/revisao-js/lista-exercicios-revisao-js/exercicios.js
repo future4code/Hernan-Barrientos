@@ -63,6 +63,11 @@ function retornaExpressoesBooleanas() {
 
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
+  const pairsNumbers = []
+  for (let i = 0; i < n; i++){
+     pairsNumbers.push(i*2)
+  }
+  return pairsNumbers
 
 }
 
@@ -82,11 +87,14 @@ function checaTriangulo(a, b, c) {
 // EXERCÍCIO 09
 function comparaDoisNumeros(num1, num2) {
   // Formato do objeto a ser retornado:
-  // {
-  //   maiorNumero: X,
-  //   maiorDivisivelPorMenor: Y,
-  //   diferenca: Z
-  // }
+  const numberMax = Math.max(num1, num2)
+  const numberMin = Math.min(num1, num2)
+    const comparationNumbers = {
+    maiorNumero: numberMax,
+    maiorDivisivelPorMenor: (numberMax % numberMin === 0),
+    diferenca: (numberMax - numberMin)
+  }
+  return comparationNumbers
 }
 
 // EXERCÍCIO 10
@@ -102,11 +110,26 @@ function ordenaArray(array) {
 // EXERCÍCIO 12
 function filmeFavorito() {
 
+  const favoriteMovie = {
+  nome: "O Diabo Veste Prada",
+  ano: 2006,
+  diretor: "David Frankel",
+  atores: ["Meryl Streep", "Anne Hathaway", "Emily Blunt", "Stanley Tucci"]
+  }
+  return favoriteMovie
 }
 
 // EXERCÍCIO 13
 function imprimeChamada() {
   // "Venha assistir ao filme NOME_DO_FILME, de ANO, dirigido por DIRECAO e estrelado por ELENCO."
+  const favoriteMovie = {
+    nome: "O Diabo Veste Prada",
+    ano: 2006,
+    diretor: "David Frankel",
+    atores: ["Meryl Streep", "Anne Hathaway", "Emily Blunt", "Stanley Tucci"]
+    }
+    return `Venha assistir ao filme ${favoriteMovie.nome}, de ${favoriteMovie.ano}, dirigido por ${favoriteMovie.diretor} e estrelado por ${favoriteMovie.atores.join(", ")}.`
+
 }
 
 // EXERCÍCIO 14
