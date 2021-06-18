@@ -1,22 +1,22 @@
 // EXERCÍCIO 01
 function inverteArray(array) {
 
-    
+
   const arrayReverse = []
 
-for (let i = array.length - 1; i >= 0; i--) {
-  arrayReverse.push(array[i])
-   
-}
-return arrayReverse
+  for (let i = array.length - 1; i >= 0; i--) {
+    arrayReverse.push(array[i])
+
+  }
+  return arrayReverse
 }
 
 // EXERCÍCIO 02
 function retornaNumerosParesElevadosADois(array) {
   const arrayNumbers = []
-  for(let newValue of array){
-    if(newValue % 2 === 0){
-      arrayNumbers.push(newValue*newValue)
+  for (let newValue of array) {
+    if (newValue % 2 === 0) {
+      arrayNumbers.push(newValue * newValue)
 
     }
   }
@@ -26,13 +26,13 @@ function retornaNumerosParesElevadosADois(array) {
 
 // EXERCÍCIO 03
 function retornaNumerosPares(array) {
-const arrayNumbers = []
-for(let newValue of array){
-  if(newValue % 2 === 0){
-    arrayNumbers.push(newValue)
+  const arrayNumbers = []
+  for (let newValue of array) {
+    if (newValue % 2 === 0) {
+      arrayNumbers.push(newValue)
+    }
   }
-}
-return arrayNumbers
+  return arrayNumbers
 }
 
 // EXERCÍCIO 04
@@ -40,7 +40,7 @@ function retornaMaiorNumero(array) {
 
 
 
-return Math.max(...array)
+  return Math.max(...array)
 
 }
 
@@ -64,8 +64,8 @@ function retornaExpressoesBooleanas() {
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
   const pairsNumbers = []
-  for (let i = 0; i < n; i++){
-     pairsNumbers.push(i*2)
+  for (let i = 0; i < n; i++) {
+    pairsNumbers.push(i * 2)
   }
   return pairsNumbers
 
@@ -74,11 +74,11 @@ function retornaNNumerosPares(n) {
 // EXERCÍCIO 08
 function checaTriangulo(a, b, c) {
 
-  if(a !== b && b !== c && c !== a){
+  if (a !== b && b !== c && c !== a) {
     return 'Escaleno'
-    } else if (a === b && b === c && c === a){
+  } else if (a === b && b === c && c === a) {
     return 'Equilátero'
-  } else if (a === b && a !== c){
+  } else if (a === b && a !== c) {
     return 'Isósceles'
   }
 
@@ -89,7 +89,7 @@ function comparaDoisNumeros(num1, num2) {
   // Formato do objeto a ser retornado:
   const numberMax = Math.max(num1, num2)
   const numberMin = Math.min(num1, num2)
-    const comparationNumbers = {
+  const comparationNumbers = {
     maiorNumero: numberMax,
     maiorDivisivelPorMenor: (numberMax % numberMin === 0),
     diferenca: (numberMax - numberMin)
@@ -101,9 +101,13 @@ function comparaDoisNumeros(num1, num2) {
 function segundoMaiorEMenor(array) {
 
 }
+  
 
 // EXERCÍCIO 11
 function ordenaArray(array) {
+  
+  let newArray = array.sort()
+  return newArra
 
 }
 
@@ -111,10 +115,10 @@ function ordenaArray(array) {
 function filmeFavorito() {
 
   const favoriteMovie = {
-  nome: "O Diabo Veste Prada",
-  ano: 2006,
-  diretor: "David Frankel",
-  atores: ["Meryl Streep", "Anne Hathaway", "Emily Blunt", "Stanley Tucci"]
+    nome: "O Diabo Veste Prada",
+    ano: 2006,
+    diretor: "David Frankel",
+    atores: ["Meryl Streep", "Anne Hathaway", "Emily Blunt", "Stanley Tucci"]
   }
   return favoriteMovie
 }
@@ -127,8 +131,8 @@ function imprimeChamada() {
     ano: 2006,
     diretor: "David Frankel",
     atores: ["Meryl Streep", "Anne Hathaway", "Emily Blunt", "Stanley Tucci"]
-    }
-    return `Venha assistir ao filme ${favoriteMovie.nome}, de ${favoriteMovie.ano}, dirigido por ${favoriteMovie.diretor} e estrelado por ${favoriteMovie.atores.join(", ")}.`
+  }
+  return `Venha assistir ao filme ${favoriteMovie.nome}, de ${favoriteMovie.ano}, dirigido por ${favoriteMovie.diretor} e estrelado por ${favoriteMovie.atores.join(", ")}.`
 
 }
 
