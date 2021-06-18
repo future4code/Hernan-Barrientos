@@ -105,9 +105,9 @@ function segundoMaiorEMenor(array) {
 
 // EXERCÍCIO 11
 function ordenaArray(array) {
-  
+
   let newArray = array.sort()
-  return newArra
+  return newArray
 
 }
 
