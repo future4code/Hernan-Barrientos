@@ -224,8 +224,16 @@ return podeEntrar
 
 // EXERCÍCIO 18B
 function retornaPessoasNaoAutorizadas(pessoas) {
+  const naoPodeEntrar = []
+  pessoas.map((semAcesso) => {
+    if (semAcesso.altura <= 1.5 || semAcesso.idade <= 14 || semAcesso.idade >= 60) {
+      naoPodeEntrar.push(semAcesso)
+    } 
+  })
+ 
+ return naoPodeEntrar
+ }
 
-}
 
 // EXERCÍCIO 19A
 function ordenaPorNome(consultasNome) {
