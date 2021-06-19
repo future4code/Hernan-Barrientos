@@ -208,10 +208,18 @@ const novoArray = []
 
 return novoArray
 }
-
+//A regra para entrar na montanha russa do terror é:
+// ter, no mínimo, 1.5m de altura; ser mais velho do que 14 anos e mais novo do que 60 anos.
 // EXERCÍCIO 18A
 function retornaPessoasAutorizadas(pessoas) {
+  const podeEntrar = []
+ pessoas.map((temAcesso) => {
+   if (temAcesso.altura > 1.5 && temAcesso.idade > 14 && temAcesso.idade < 60) {
+     podeEntrar.push(temAcesso)
+   } 
+ })
 
+return podeEntrar
 }
 
 // EXERCÍCIO 18B
