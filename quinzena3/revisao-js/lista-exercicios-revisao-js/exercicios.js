@@ -99,8 +99,20 @@ function comparaDoisNumeros(num1, num2) {
 
 // EXERCÍCIO 10
 function segundoMaiorEMenor(array) {
+for(let i = 0; i <= array.length - 1; i++){
+  for(let j = i + 1; j <= array.length; j++){
+    if(array[i] > array [j]){
+      let aux = array[i]
+      array[i] = array[j]
+      array[j] = aux
+    }
+  }
+}
+let novoArray = []
+novoArray.push(array[array.length-2])
+novoArray.push(array[1])
 
-
+return novoArray
 }
 
 
@@ -237,12 +249,32 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 
 // EXERCÍCIO 19A
 function ordenaPorNome(consultasNome) {
-
+  let newArray = consultasNome.sort(function (a, b) {
+    if (a.nome > b.nome) {
+      return 1;
+    }
+    if (a.nome < b.nome) {
+      return -1;
+    }
+    
+    return 0;
+  });
+  return newArray
 }
 
 // EXERCÍCIO 19B
 function ordenaPorData(consultasData) {
-
+  let newArray = consultasNome.sort(function (a, b) {
+    if (a.data > b.data) {
+      return 1;
+    }
+    if (a.data < b.data) {
+      return -1;
+    }
+    
+    return 0;
+  });
+  return newArray
 }
 
 // EXERCÍCIO 20
