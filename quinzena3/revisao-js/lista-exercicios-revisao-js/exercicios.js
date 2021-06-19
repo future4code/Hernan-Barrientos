@@ -189,7 +189,10 @@ function multiplicaArrayPor2(array) {
 
 // EXERCÍCIO 17B
 function multiplicaArrayPor2S(array) {
-
+  const arrayMultiplicadoPor2 = array.map((novoValor) => {
+    return (novoValor*2).toString()
+   })
+  return arrayMultiplicadoPor2
 }
 
 // EXERCÍCIO 17C
