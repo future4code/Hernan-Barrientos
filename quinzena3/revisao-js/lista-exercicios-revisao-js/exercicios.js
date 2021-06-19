@@ -100,16 +100,19 @@ function comparaDoisNumeros(num1, num2) {
 // EXERCÍCIO 10
 function segundoMaiorEMenor(array) {
 
-}
+ 
+  } 
   
 
 // EXERCÍCIO 11
-function ordenaArray(array) {
+function ordenaArray(array) { 
+  
+ newArray = array.sort(function(a, b) {
+  return a - b
+})
+return newArray
 
-  let newArray = array.sort()
-  return newArray
-
-}
+  }
 
 // EXERCÍCIO 12
 function filmeFavorito() {
