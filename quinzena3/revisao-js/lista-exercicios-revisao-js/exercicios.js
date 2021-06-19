@@ -100,19 +100,19 @@ function comparaDoisNumeros(num1, num2) {
 // EXERCÍCIO 10
 function segundoMaiorEMenor(array) {
 
- 
-  } 
-  
+
+}
+
 
 // EXERCÍCIO 11
-function ordenaArray(array) { 
-  
- newArray = array.sort(function(a, b) {
-  return a - b
-})
-return newArray
+function ordenaArray(array) {
 
-  }
+  newArray = array.sort(function (a, b) {
+    return a - b
+  })
+  return newArray
+
+}
 
 // EXERCÍCIO 12
 function filmeFavorito() {
@@ -141,16 +141,30 @@ function imprimeChamada() {
 
 // EXERCÍCIO 14
 function criaRetangulo(lado1, lado2) {
+  const retangulo = {
+    largura: lado1,
+    altura: lado2,
+    perimetro: 2 * (lado1 + lado2),
+    area: (lado1 * lado2)
+  }
+  return retangulo
 
 }
 
 // EXERCÍCIO 15
 function anonimizaPessoa(pessoa) {
 
+  const novaPessoa = {
+    ...pessoa,
+    nome: "ANÔNIMO",
+
+  }
+  return novaPessoa
 }
 
 // EXERCÍCIO 16A
 function maioresDe18(arrayDePessoas) {
+
 
 }
 
