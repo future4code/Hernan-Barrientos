@@ -164,16 +164,19 @@ function anonimizaPessoa(pessoa) {
 
 // EXERCÍCIO 16A
 function maioresDe18(arrayDePessoas) {
-  let newArray = []
-  const newArrayDePessoas = arrayDePessoas.filter((maioresDe18) => {
-     newArray.push(maioresde18 >= 18)
+  const maisDe18 = arrayDePessoas.filter((temMaisDe18) => {
+    return temMaisDe18.idade >= 18
   })
-  return newArray
+ return maisDe18
+ 
 }
 
 // EXERCÍCIO 16B
 function menoresDe18(arrayDePessoas) {
-
+  const menosDe18 = arrayDePessoas.filter((temMenosDe18) => {
+    return temMaisde18.idade >= 18
+  })
+ return menosDe18
 }
 
 // EXERCÍCIO 17A
