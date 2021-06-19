@@ -174,7 +174,7 @@ function maioresDe18(arrayDePessoas) {
 // EXERCÍCIO 16B
 function menoresDe18(arrayDePessoas) {
   const menosDe18 = arrayDePessoas.filter((temMenosDe18) => {
-    return temMaisde18.idade >= 18
+    return temMenosDe18.idade < 18
   })
  return menosDe18
 }
