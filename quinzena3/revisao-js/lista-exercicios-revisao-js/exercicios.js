@@ -99,20 +99,20 @@ function comparaDoisNumeros(num1, num2) {
 
 // EXERCÍCIO 10
 function segundoMaiorEMenor(array) {
-for(let i = 0; i <= array.length - 1; i++){
-  for(let j = i + 1; j <= array.length; j++){
-    if(array[i] > array [j]){
-      let aux = array[i]
-      array[i] = array[j]
-      array[j] = aux
+  for (let i = 0; i <= array.length - 1; i++) {
+    for (let j = i + 1; j <= array.length; j++) {
+      if (array[i] > array[j]) {
+        let aux = array[i]
+        array[i] = array[j]
+        array[j] = aux
+      }
     }
   }
-}
-let novoArray = []
-novoArray.push(array[array.length-2])
-novoArray.push(array[1])
+  let novoArray = []
+  novoArray.push(array[array.length - 2])
+  novoArray.push(array[1])
 
-return novoArray
+  return novoArray
 }
 
 
@@ -179,8 +179,8 @@ function maioresDe18(arrayDePessoas) {
   const maisDe18 = arrayDePessoas.filter((temMaisDe18) => {
     return temMaisDe18.idade >= 18
   })
- return maisDe18
- 
+  return maisDe18
+
 }
 
 // EXERCÍCIO 16B
@@ -188,50 +188,49 @@ function menoresDe18(arrayDePessoas) {
   const menosDe18 = arrayDePessoas.filter((temMenosDe18) => {
     return temMenosDe18.idade < 18
   })
- return menosDe18
+  return menosDe18
 }
 
 // EXERCÍCIO 17A
 function multiplicaArrayPor2(array) {
   const arrayMultiplicadoPor2 = array.map((novoValor) => {
-      return (novoValor*2)
-     })
-    return arrayMultiplicadoPor2
+    return (novoValor * 2)
+  })
+  return arrayMultiplicadoPor2
 }
 
 // EXERCÍCIO 17B
 function multiplicaArrayPor2S(array) {
   const arrayMultiplicadoPor2 = array.map((novoValor) => {
-    return (novoValor*2).toString()
-   })
+    return (novoValor * 2).toString()
+  })
   return arrayMultiplicadoPor2
 }
 
 // EXERCÍCIO 17C
 function verificaParidade(array) {
-const novoArray = []
- array.map((num) => {
-   if (num % 2 === 0) {
-     novoArray.push(`${num} é par`)
-   } else {
-     novoArray.push(`${num} é ímpar`)
-   }
- })
+  const novoArray = []
+  array.map((num) => {
+    if (num % 2 === 0) {
+      novoArray.push(`${num} é par`)
+    } else {
+      novoArray.push(`${num} é ímpar`)
+    }
+  })
 
-return novoArray
+  return novoArray
 }
-//A regra para entrar na montanha russa do terror é:
-// ter, no mínimo, 1.5m de altura; ser mais velho do que 14 anos e mais novo do que 60 anos.
+
 // EXERCÍCIO 18A
 function retornaPessoasAutorizadas(pessoas) {
   const podeEntrar = []
- pessoas.map((temAcesso) => {
-   if (temAcesso.altura > 1.5 && temAcesso.idade > 14 && temAcesso.idade < 60) {
-     podeEntrar.push(temAcesso)
-   } 
- })
+  pessoas.map((temAcesso) => {
+    if (temAcesso.altura > 1.5 && temAcesso.idade > 14 && temAcesso.idade < 60) {
+      podeEntrar.push(temAcesso)
+    }
+  })
 
-return podeEntrar
+  return podeEntrar
 }
 
 // EXERCÍCIO 18B
@@ -240,44 +239,59 @@ function retornaPessoasNaoAutorizadas(pessoas) {
   pessoas.map((semAcesso) => {
     if (semAcesso.altura <= 1.5 || semAcesso.idade <= 14 || semAcesso.idade >= 60) {
       naoPodeEntrar.push(semAcesso)
-    } 
+    }
   })
- 
- return naoPodeEntrar
- }
+
+  return naoPodeEntrar
+}
 
 
 // EXERCÍCIO 19A
 function ordenaPorNome(consultasNome) {
   let newArray = consultasNome.sort(function (a, b) {
     if (a.nome > b.nome) {
-      return 1;
+      return 1
     }
     if (a.nome < b.nome) {
-      return -1;
+      return -1
     }
-    
-    return 0;
-  });
+
+    return 0
+  })
   return newArray
 }
 
 // EXERCÍCIO 19B
 function ordenaPorData(consultasData) {
-  let newArray = consultasNome.sort(function (a, b) {
-    if (a.data > b.data) {
-      return 1;
+  let newArray = consultasData.sort(function (a, b) {
+    let arrayDataA = a.dataDaConsulta.split("/")
+    let dataA = new Date(arrayDataA[2], arrayDataA[1], arrayDataA[0]).getTime()
+    let arrayDataB = b.dataDaConsulta.split("/")
+    let dataB = new Date(arrayDataB[2], arrayDataB[1], arrayDataB[0]).getTime()
+    if (dataA > dataB) {
+      return 1
     }
-    if (a.data < b.data) {
-      return -1;
+    if (dataA < dataB) {
+      return -1
     }
-    
-    return 0;
-  });
+
+    return 0
+  })
   return newArray
 }
+//const timestamp = new Date(2021, 0, 1).getTime()
 
 // EXERCÍCIO 20
 function calculaSaldo(contas) {
+
+  for (let i = 0; i < contas.length; i++) {
+    let debitos = 0
+    for (creditos of contas[i].compras) {
+      debitos += Number(creditos)
+    }
+    contas[i].saldoTotal = contas[i].saldoTotal - debitos
+    console.log(contas[i].saldoTotal)
+  } return contas
+
 
 }
