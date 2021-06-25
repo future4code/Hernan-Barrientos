@@ -1,57 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="../sistema-loja/img/icon.png">
-    <title>Adicionar Produto</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Sabinex Eletronicos</title>
+
 </head>
-<body bgcolor="PowderBlue" background="img/logoTransparencia2.png" BGPROPERTIES="lammer">
-    <div><img src="../sistema-loja/img/BANNER SITE sabinex.png"></div>
-    <div>
-        <p>Sabinex Eletronicos</p>
-    </div>
-    
-    <div>
-        <a href="../sistema-loja/index.html">Página Inicial</a>
-        <a href="../sistema-loja/ctrl-estoque.html">Controle de Estoque</a>
-        <a href="../sistema-loja/add-produto.html">Adicionar Produto</a>
-        <a href="../sistema-loja/funcionarios.html">Funcionários</a>
-    </div>
 
-    
-    <h2>Adicionar Produto</h2>
-    <form action="#">
-        <div>
-            <label for="link-foto">Link para foto: </label>
-            <input type="url" id="link-foto" name="link-foto">
-        </div>
+<body>
+    <header>
+
+        <nav>
+            <ul>
+                <a href="../sistema-loja/index.html">
+                    <li class="BOTAO">Página Inicial</li>
+                </a>
+                <a href="../sistema-loja/ctrl-estoque.html">
+                    <li class="BOTAO">Controle de Estoque</li>
+                </a>
+                <a href="../sistema-loja/add-produto.html">
+                    <li class="BOTAO">Adicionar Produto</li>
+                </a>
+                <a href="../sistema-loja/funcionarios.html">
+                    <li class="BOTAO">Funcionários</li>
+                </a>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section id="banner"> <img src="../sistema-loja/img/BANNER SITE sabinex.png"></section>
+        <h2>Adicionar Produto</h2>
+        <form action="#">
+            <div>
+                <label for="link-foto">Link para foto: </label>
+                <input type="url" id="link-foto" name="link-foto">
+            </div>
+
+            <div>
+                <label for="descricao">Descrição do produto: </label>
+                <!-- Adicione o id apropriado para o input abaixo -->
+                <input type="text" id="descricao" name="descricao">
+            </div>
+
+            <div>
+                <label for="preco">Preço (em R$): </label>
+                <!-- Adicione o id apropriado e o type para receber números abaixo -->
+                <input type="number" id="preco" name="preco">
+            </div>
+
+            <div>
+                <!-- Preencha as propriedades necessárias para os elementos abaixo -->
+                <label for="qtdDisponivel">Quantidade disponível: </label>
+                <input type="number" id="qtdDisponivel" name="qtdDisponivel">
+            </div>
+
+            <div class="form-add">
+                <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
+                <button type="submit">Adicionar</button>
+            </div>
+
+        </form>
         
-        <div>
-            <label for="descricao">Descrição do produto: </label>
-            <!-- Adicione o id apropriado para o input abaixo -->
-            <input type="text" id="descricao" name="descricao">
-        </div>
-        
-        <div>
-            <label for="preco">Preço (em R$): </label>
-            <!-- Adicione o id apropriado e o type para receber números abaixo -->
-            <input type="number" id="preco" name="preco">
-        </div>
-        
-        <div>
-            <!-- Preencha as propriedades necessárias para os elementos abaixo -->
-            <label for="qtdDisponivel">Quantidade disponível: </label>
-            <input type="number" id="qtdDisponivel" name="qtdDisponivel">
-        </div>
+    </main>
+    <footer>
+        <p>Siga-nos nas redes sociais!</p>
 
-        <div class="form-add">
-            <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
-            <button type="submit">Adicionar</button>
-        </div>
-
-    </form>
-
+        <figure>
+            <img src="../sistema-loja/img/insta.png"/>
+            <img src="../sistema-loja/img/face.png" />
+            <img src="../sistema-loja/img/twitter.png" />
+        </figure>
+    </footer>
 </body>
+
 </html>
