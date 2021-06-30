@@ -77,7 +77,12 @@ div img {
     background-color: #2274a5;
     color: white;
     padding-top: 100px;
+    
 }
+p span{
+    display: block;
+}
+
 
 #container-de-descricao>ol {
     padding: 15px 0px;
