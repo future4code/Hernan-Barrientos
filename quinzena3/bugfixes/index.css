@@ -105,6 +105,10 @@ p span{
   *  ESTILOS COMPRAR 
   *
   **/
+.icone{
+    width: 1.5vw;
+    height: 3vh;
+}
 
 div:nth-child(2),
 div:last-child {
