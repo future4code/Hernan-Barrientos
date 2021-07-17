@@ -1,0 +1,17 @@
+.litllecard-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    justify-items: left;
+    margin-bottom: 10px;
+ }
+
+.litllecard-container h4 {
+    margin-bottom: 8px;
+}
+
+.litllecard-container .bigcard-container > div {
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+}
