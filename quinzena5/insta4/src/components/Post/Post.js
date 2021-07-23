@@ -56,9 +56,17 @@ class Post extends React.Component {
   }
 
   onClickCurtida = () => {
+    let novoNumeroCurtidas
+
+    if(this.state.curtido) {
+      novoNumeroCurtidas = this.state.numeroCurtidas - 1
+    } else {
+      novoNumeroCurtidas = this.state.numeroCurtidas + 1
+    }
+
     this.setState({
       curtido: !false,
-      numeroCurtidas: this.state.numeroCurtidas + 1
+      numeroCurtidas: this.state.novoNumeroCurtidas
     })
   }
 
