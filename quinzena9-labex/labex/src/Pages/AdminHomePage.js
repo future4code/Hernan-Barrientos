@@ -1,7 +1,9 @@
 import React from "react";
 import { useHistory } from "react-router";
+import { useProtectedPage } from "../hooks/useProtectedPage";
 
 const AdminHomePage = () => {
+  useProtectedPage()
   
   const history = useHistory()
 
@@ -14,7 +16,10 @@ const AdminHomePage = () => {
   }
 
   const logout = () => {
-    history.push("/")
+    
+    localStorage.clear()
+          
+    history.push("/login")
   }
 
 

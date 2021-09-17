@@ -4,7 +4,7 @@ import HomePage from "./Pages/HomePage";
 import ListTripsPage from "./Pages/ListTripsPage";
 import AdminHomePage from "./Pages/AdminHomePage";
 import ApplicationFormPage from "./Pages/ApplicationFormPage";
-import TripDetailsPage from "./Pages/TripDetailsPage";
+import TripDetailsPage from "./TripDetailsPage";
 import CreateTripPage from "./Pages/CreateTripPage";
 import LoginPage from "./Pages/LoginPage";
 
@@ -29,7 +29,7 @@ const App = () => {
         </Route>
 
         <Route exact path={"/admin/trips/list"}>
-          <AdminHomePage />
+          <TripDetailsPage />
         </Route>
 
         <Route exact path={"/admin/trips/create"}>
@@ -37,9 +37,10 @@ const App = () => {
         </Route>
 
         <Route exact path={"/admin/trips/:id"}>
-          <TripDetailsPage />
+          <AdminHomePage />
         </Route>
 
+      
       </Switch>
     </BrowserRouter>
 
